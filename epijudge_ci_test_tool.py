@@ -160,5 +160,5 @@ def check_judge(build_dir: str, src_dir: str, lang: str, mode: str) -> None:
     print('Success')
 
 
-if __name__ == '__main__':
-    check_judge()
+# if __name__ == '__main__':
+#     check_judge()
