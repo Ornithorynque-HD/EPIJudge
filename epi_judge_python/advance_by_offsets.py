@@ -1,11 +1,18 @@
 from typing import List
-
+from queue import Queue
 from test_framework import generic_test
 
 
 def can_reach_end(A: List[int]) -> bool:
-    # TODO - you fill in here.
-    return True
+    max_i=0
+    last_i=len(A)-1
+    i=0
+    while max_i<last_i:
+        if i==max_i and A[max_i]==0:
+            return False
+        max_i=max(max_i,i+A[i])
+        i+=1
+    return max_i>=(len(A)-1)
 
 
 if __name__ == '__main__':
